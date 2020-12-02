@@ -1,0 +1,36 @@
+﻿<Window x:Class="Library.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="Информация о книге" Height="400" Width="500" Background="#FFEEEEEE">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="216"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="148"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Source="Resources/kings.jpg" Margin="10,0" Grid.Row="1" VerticalAlignment="Top" Height="204" Grid.RowSpan="2"/>
+        <TextBlock x:Name="name" Margin="10,4,17,0" TextWrapping="Wrap" Text="Вы, конечно, шутите, мистер Фейнман!" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" TextAlignment="Center" Foreground="#FF703030" Height="21" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="author" Margin="10,25,10,0" TextWrapping="Wrap" Text="Р.Фейнман" VerticalAlignment="Top" FontSize="14" FontStyle="Italic" TextAlignment="Center" Height="19" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="year1" HorizontalAlignment="Left" Margin="16,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" Grid.Row="1" Height="16" Grid.Column="1" Foreground="Black" FontWeight="Bold"><Run Text="Год издания"/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="pages1" HorizontalAlignment="Left" Margin="16,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Row="1" Height="16" Grid.Column="1" Text="Страниц: " Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="genre1" Margin="16,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Height="16" Grid.Column="1" HorizontalAlignment="Left" Width="38" Text="Жанр:" FontWeight="Bold" RenderTransformOrigin="0.5,0.188"/>
+        <TextBlock x:Name="year" HorizontalAlignment="Left" Margin="97,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Width="106" Height="16"><Run Text="2018"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="pages" HorizontalAlignment="Left" Margin="74,40,0,0" TextWrapping="Wrap" Text="479" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Width="95" Height="16"/>
+        <TextBlock x:Name="genre" HorizontalAlignment="Left" Margin="59,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Автобиография" Width="268" Grid.Column="1" Grid.Row="1"/>
+
+        <Grid Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <ScrollViewer Margin="163,0,0,31" Height="184" VerticalAlignment="Bottom">
+                <TextBlock x:Name="description" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Он был известен своим пристрастием к шуткам и розыгрышам, писал изумительные портреты, играл на экзотических музыкальных инструментах. Великолепный оратор, он превращал каждую свою лекцию в захватывающую интеллектуальную игру. На его выступления рвались не только студенты и коллеги, но и люди, просто увлеченные физикой. Автобиография великого ученого захватывает сильнее, чем приключенческий роман. Это одна из немногих книг, которые навсегда остаются в памяти каждого, кто их прочитал." HorizontalAlignment="Left"/>
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</Window>
